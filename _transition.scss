@@ -1,0 +1,89 @@
+// ------------------------------------------ transition ------------------------------------------------------------------
+
+
+// -------------------------------------------
+// -------------------------------------------
+// -------------------------------------------
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes $animation-name {
+		@content;
+	}
+	@-moz-keyframes $animation-name {
+		@content;
+	}  
+	@-ms-keyframes $animation-name {
+		@content;
+	}
+	@-o-keyframes $animation-name {
+		@content;
+	}  
+	@keyframes $animation-name {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	   -moz-animation: #{$str};
+	    -ms-animation: #{$str};
+	     -o-animation: #{$str};
+	        animation: #{$str};      
+}
+/*
+example
+@include keyframes(slide-down) {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  background: black;
+  @include animation('slide-down 5s 3');
+}
+*/
+
+// -------------------------------------------
+// css transition
+// -------------------------------------------
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	   -moz-transition: $args;
+	    -ms-transition: $args;
+	     -o-transition: $args;
+	        transition: $args;
+}
+/*
+example
+a {
+	color: gray;
+	@include transition(color .3s ease);
+	&:hover {
+		color: black;
+	}
+}
+
+transition optional 
+- width 2s
+- width 2s, height 4s
+- width 2s, height 2s, transform 2s
+
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+
+
+transition-property: width;
+transition-duration: 2s;
+transition-timing-function: linear;
+transition-delay: 1s;
+
+transition: width 2s linear 1s;
+
+-webkit-transition-delay: 1s;
+transition-delay: 1s;
+ 
+*/

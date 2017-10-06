@@ -1,0 +1,38 @@
+// ------------------------------------------ 2dtransport -----------------------------------------------------------------
+
+// -------------------------------------------
+// -------------- rotateX ------------------
+// -------------------------------------------
+@mixin rotateX($option){
+    -webkit-transform: rotateX($option);
+            transform: rotateX($option);
+}
+/*
+example
+@include rotateX(150deg);
+*/
+
+
+// -------------------------------------------
+// -------------- rotateY ------------------
+// -------------------------------------------
+@mixin rotateY($option){
+    -webkit-transform: rotateY($option);
+            transform: rotateY($option);
+}
+/*
+example
+@include rotateY(150deg);
+*/
+
+// -------------------------------------------
+// -------------- rotateZ ------------------
+// -------------------------------------------
+@mixin rotateZ($option){
+    -webkit-transform: rotateZ($option);
+            transform: rotateZ($option);
+}
+/*
+example
+@include rotateZ(150deg);
+*/
